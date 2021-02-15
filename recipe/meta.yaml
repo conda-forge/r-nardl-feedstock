@@ -13,25 +13,29 @@ source:
   sha256: 35882ce3cd2c47f117a3741539ac46cf099bf0d44a9d60e6d84012fd498dc8ed
 
 build:
-  noarch: generic
   merge_build_host: true  # [win]
   number: 0
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
 
 requirements:
   build:
-
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-formula
+    - r-mass
+    - r-car
     - r-gtools
     - r-strucchange
     - r-tseries
   run:
     - r-base
     - r-formula
+    - r-mass
+    - r-car
     - r-gtools
     - r-strucchange
     - r-tseries
@@ -43,10 +47,11 @@ test:
 
 about:
   home: https://github.com/zedtaha/nardl
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Computes the nonlinear cointegrating autoregressive distributed lag model with p lags of the dependent variables and q lags of independent variables proposed by (Shin, Yu & Greenwood-Nimmo, 2014 <doi:10.1007/978-1-4899-8008-3_9>).
   license_family: GPL3
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license_file:
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
