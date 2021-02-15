@@ -5,11 +5,9 @@ Home: https://github.com/zedtaha/nardl
 
 Package license: GPL-3
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-nardl-feedstock/blob/master/LICENSE.txt)
 
 Summary: Computes the nonlinear cointegrating autoregressive distributed lag model with p lags of the dependent variables and q lags of independent variables proposed by (Shin, Yu & Greenwood-Nimmo, 2014 <doi:10.1007/978-1-4899-8008-3_9>).
-
-
 
 Current build status
 ====================
